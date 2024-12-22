@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light grey background for the info page */
+    padding-top: 70px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #B3D9FF;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    box-sizing: border-box;
+  }
+  
+  header .logo img {
+    height: 40px;
+  }
+  
+  .desktop-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .desktop-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .hamburger-menu {
+    display: none; /* Hidden on larger screens */
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  #facility-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #ffffff;
+  }
+  
+  .facility-info-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+  
+  .facility-info-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transform: scale(0.9);
+  }
+  
+  .facility-info-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .facility-info-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .facility-info-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .facility-info-text h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: #444;
+  }
+  
+  .facility-info-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .facility-info-text ul li {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  #emphasis {
+    color: #d51530;
+  }
+  
+  footer {
+    background: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer .social-links a,
+  footer .quick-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .facility-info-container {
+      flex-direction: column; /* Stack the image on top of the text */
+    }
+  
+    .facility-info-image {
+      order: -1; /* Ensures the image appears at the top */
+    }
+  
+    .facility-info-text {
+      text-align: center; /* Optional: Centers the text for smaller screens */
+    }
+  
+    .facility-info-image img {
+      width: 100%; 
+      height: auto; 
+    }
+
+    .hamburger-menu {
+      display: block;
+    }
+  
+    /* Hide the nav menu by default */
+    .desktop-nav {
+      display: none; /* Hidden by default */
+    }
+  
+    /* When the menu is active, display it */
+    .desktop-nav.active {
+      display: flex;
+      flex-direction: column; 
+      position: absolute;
+      top: 60px; /* Just below the header */
+      right: 20px;
+      background-color: #B3D9FF;
+      width: 200px;
+      border-radius: 8px;
+      padding: 10px;
+      z-index: 100; 
+    }
+  
+    .desktop-nav ul {
+      flex-direction: column; 
+      gap: 10px; /* Spacing between menu items */
+    }
+  
+    .desktop-nav a {
+      color: #333;
+      text-align: left;
+    }
+  }
+  
+  
