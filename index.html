@@ -3,97 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bright beginnings</title>
+  <title>Home Page</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="index.html">
-      <img src="bbdc.png" alt="Daycare Logo">
-      </a>
-    </div>
 
-    <div class="hamburger-menu">&#9776;</div>
-
-    <nav class="desktop-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#facilities">Facilities</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-      
-
-  <section id="hero">
+    <header class="site-header">
+        <div class="header-content">
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#facilities">Facilities</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+  <!-- Hero Section -->
+  <header class="hero">
     <div class="hero-content">
       <h1>Welcome to Bright beginnings!</h1>
-      <p>Your child's happiness and safety are our priority.</p>
-      <a href="learn more.html"class="cta-button">Learn More</a>
+      <p>Building Strong Foundations for Tomorrow</p>
+      <a href="#about" class="cta-button" id="learn-more">Learn More</a>
+    </div>
+  </header>
+  <section id="info">
+    <h1>Registration open for 2025!</h1>
+  </section>
+  <section id="about" class="about">
+    <div class="about-content">
+      <h2>About Bright Beginnings</h2>
+      <p>Welcome to bright beginnings, a preschool in Pretoria Philip nel park that not only offers Your
+        child the best daycare and aftercare services but, prepares them for primary school with a
+        high quality syllabus for specific age groups with an English medium.
+        <p>Rest assured that your child's saftey is our priority and will be under the care of trained proffesionals
+            to cater to their every need. </p>
+      </p>
+      <a href="learn more.html" class="cta-button">Learn More</a>
     </div>
   </section>
 
-  <section id="facilities">
+  <!-- Facilities Section -->
+  <section id="facilities" class="facilities">
     <h2>Our Facilities</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="playground-small.png" alt="Playground">
+    <div class="facility">
+      <img src="tvrooom-small.png" alt="TV Room" class="facility-image">
+      <div class="facility-info">
+        <h3>TV Room</h3>
+        <p>Comfortable and engaging, our TV room offers a variety of educational shows for children.</p>
+        <a href="tvroom.html" class="learn-more">Learn More</a>
+      </div>
+    </div>
+    <div class="facility">
+      <img src="playground-small.png" alt="Playground" class="facility-image">
+      <div class="facility-info">
         <h3>Playground</h3>
-        <p>Outdoor fun and games for all ages.</p>
-        <a href="playground.html">Learn More</a>
+        <p>Our outdoor playground offers a safe and fun environment for children to play and socialize.</p>
+        <a href="playground.html" class="learn-more">Learn More</a>
       </div>
-      <div class="card">
-        <img src="classroom.jpg" alt="Classroom">
+    </div>
+    <div class="facility">
+      <img src="classroom.jpg" alt="Classrooms" class="facility-image">
+      <div class="facility-info">
         <h3>Classrooms</h3>
-        <p>Bright, engaging spaces for learning.</p>
-        <a href="classrooms.html">Learn More</a>
-      </div>
-      <div class="card">
-        <img src="tvrooom-small.png" alt="Nap Area">
-        <h3>TV room</h3>
-        <p>Cozy and safe spaces for rest.</p>
-        <a href="tvroom.html">Learn More</a>
+        <p>Our classrooms are designed to foster creativity, learning, and development for children of all ages.</p>
+        <a href="classrooms.html" class="learn-more">Learn More</a>
       </div>
     </div>
   </section>
 
-  <section id="services">
-    <h2>How We Support Your Little Ones</h2>
-    <div class="services-container">
-      <div class="service-card">
-        <h3>Daycare</h3>
-        <p>
-          A nurturing environment for children to learn, play, and grow. 
-          Perfect for toddlers and preschoolers.
-        </p>
-        <a href="learn more.html#daycare-services"<button class="cta-button">Learn More</button></a>
-      </div>
-      <div class="service-card">
-        <h3>Aftercare</h3>
-        <p>
-          Fun and engaging activities for school-aged children, ensuring they 
-          are cared for after school hours.
-        </p>
-        <a href="learn more.html#aftercare-services"<button class="cta-button">Learn More</button></a>
-      </div>
-    </div>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>If you'd like to know more about our facilities or schedule a visit, feel free to contact us!</p>
+    <a href="contact.html" class="contact-button">Contact Us</a>
   </section>
-  
 
-  <footer>
-    <div class="footer-content">
-      <p>Contact us: +27 794693866 | brightbeginningsdc1@gmail.com</p>
-      <div class="social-links">
-        <a href="#">Facebook</a>
-      <div class="quick-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#facilities">Facilities</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <script src="sample.js"></script>
 </body>
 </html>
+s

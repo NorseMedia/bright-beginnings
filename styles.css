@@ -1,239 +1,299 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #B3D9FF; /* Set the body background to match the header color */
-    color: #333;
-    padding-top: 70px;
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* Ensure smooth scrolling */
+  background-color: #f4f4f4;
 }
 
+.site-header {
+  background-color: #fff;
+  position: fixed; /* Keeps header fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Makes sure header is on top */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  box-sizing: border-box; /* Ensures padding does not affect the layout */
+}
 
-.cta-button {
-    padding: 10px 20px;
-    background-color: #8ac1f8; /* Solid blue as default */
-    border: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-    z-index: 1; /* Ensure the button is on top of other content */
-  }
-  
-  /* On hover, the background color fades into pink */
-  .cta-button:hover {
-    background-color: #F4A6C0; /* Solid pink when hovered */
-  }
+/* Header content should be a flex container */
+.site-header .header-content {
+  display: flex;
+  justify-content: center; /* Centers the entire header content */
+  align-items: center; /* Centers items vertically */
+  width: 100%;
+}
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #B3D9FF;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Navigation styles */
+.site-header .header-content nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centers the links within the ul */
+  margin: 0;
+  padding: 0;
+  width: auto; /* Prevents stretching */
+  flex-wrap: nowrap; /* Ensures links don't wrap onto new lines */
+}
 
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    z-index: 1000; 
-    box-sizing: border-box;
-  }
-  
-  header .logo img {
-    height: 40px;
-  }
-  
-  .desktop-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .desktop-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
+.site-header .header-content nav ul li {
+  margin-right: 20px; /* Space between items */
+}
 
-  .hamburger-menu {
-    display: none; /* Hidden on larger screens */
-    font-size: 2rem;
-    cursor: pointer;
-  }
+.site-header .header-content nav ul li:last-child {
+  margin-right: 0; /* No margin on the last item */
+}
 
-#hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 60vh;
-    background: url('280662050_475730087684048_5004799723147729631_n.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
+.site-header .header-content nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.site-header .header-content nav ul li a:hover {
+  background-color: #ff6347;
+  color: white;
+}
+
+/* Spacing for sections */
+
+
+/* Spacing for sections */
+
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('hero.png') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 .hero-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    color: black;
+  max-width: 700px;
+  z-index: 2;
 }
 
-
-
-#facilities {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(to bottom, #B3D9FF, #F4A6C0); /* Gradient from light baby blue to pink */
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
-.card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+#info h1{
+  text-align: center;
+  background-color: #f4f4f4;
+  color: red;
+}
+.about {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.card img {
-    width: 100%;
-    border-radius: 8px;
+.about p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#services {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(to bottom, #F4A6C0, #F4A6C0); 
+.about .cta-button {
+  background-color: #ff6347;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-#services h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #333;
+.about .cta-button:hover {
+  background-color: #ff4500;
 }
 
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.cta-button {
+  background-color: #ff6347;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.service-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 20px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.cta-button:hover {
+  background-color: #ff4500;
 }
 
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+/* Facilities Section */
+.facilities {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 0; /* Remove bottom margin */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 20px; /* Space between the columns */
 }
 
-.service-card h3 {
-    font-size: 1.5rem;
-    color: #444;
-    margin-bottom: 15px;
+.facilities h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
 }
 
-.service-card p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
+.facility {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.facility-image {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 30px;
+  border-radius: 10px;
+}
+
+.facility-info {
+  text-align: left;
+  max-width: 300px;
+}
+
+.facility-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
 .learn-more {
-    display: inline-block;
-    padding: 10px 20px;
-    background: linear-gradient(to right, #B3D9FF, #F4A6C0);
-    border: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.3s ease;
+  color: #ff6347;
+  font-size: 1.1rem;
+  text-decoration: none;
 }
 
 .learn-more:hover {
-    background: linear-gradient(to right, #F4A6C0, #B3D9FF);
+  text-decoration: underline;
 }
 
-footer {
-    background: white;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+/* Contact Section */
+.contact {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #ffffff;
 }
 
-footer .social-links a,
-footer .quick-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.contact-button {
+  background-color: #ff6347;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact-button:hover {
+  background-color: #ff4500;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .hamburger-menu {
-        display: block;
-      }
-    
-      /* Hide the nav menu by default */
-      .desktop-nav {
-        display: none; /* Hidden by default */
-      }
-    
-      /* When the menu is active, display it */
-      .desktop-nav.active {
-        display: flex;
-        flex-direction: column; 
-        position: absolute;
-        top: 60px; /* Just below the header */
-        right: 20px;
-        background-color: #B3D9FF;
-        width: 200px;
-        border-radius: 8px;
-        padding: 10px;
-        z-index: 100; 
-      }
-    
-      .desktop-nav ul {
-        flex-direction: column; 
-        gap: 10px; /* Spacing between menu items */
-      }
-    
-      .desktop-nav a {
-        color: #333;
-        text-align: left;
-      }
 
-    .cards {
-        flex-direction: column;
-        align-items: center;
+  .site-header .header-content {
+      justify-content: center; /* Centers the nav */
+      padding: 0;
+      width: 100%; /* Prevent stretching */
+    }
+  
+    /* Flexbox for the navigation list */
+    .site-header .header-content nav ul {
+      display: flex;
+      justify-content: center; /* Keep links centered */
+      margin: 0;
+      padding: 0;
+      width: auto; /* Avoid full width */
+      flex-wrap: nowrap; /* Prevent wrapping */
+    }
+  
+    .site-header .header-content nav ul li {
+      margin: 0 5px;  /* Adjust space between links */
+    }
+  
+    /* Adjust font size and padding for better compactness */
+    .site-header .header-content nav ul li a {
+      font-size: 1rem;
+      padding: 5px 8px;
+    }
+    
+  .hero h1 {
+      font-size: 2rem;
+  }
+
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .cta-button {
+      padding: 12px 25px;
+      font-size: 1rem;
+  }
+
+  .facilities {
+      grid-template-columns: 1fr; /* Single column layout for smaller screens */
     }
 
-    .hero-content {
-        max-width: 60%;
-        max-height: 60%;
+    .facility {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .facility-image {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%;
+      height: auto;
+    }
+
+    .facility-info {
+      text-align: center;
     }
 }
+
 
